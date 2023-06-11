@@ -7,16 +7,16 @@ etiket2=tk.Label(form,text="Simulator",fg="black")
 etiket2.pack()
 print("Welcome to Economy Simulator")
 print("If Debt Level 300, Inflation 250, Dollar (Pound-Dollar) 50, Unemployment finds 100 game will be over")
-interest rate=8
+interest=8
 dollar=23
 inflation=175
 debt=200
 unemployment=40
 def increase():
-    global interest rate
-    interest rate=interest rate+1
+    global interest
+    interest=interest+1
     print("Interest Rate Increase")
-    print(interest rate)
+    print(interest)
     global dollar
     dollar=dollar-2
     print("Dolar Decrease")
@@ -38,10 +38,10 @@ def increase():
 form.state("normal")
 
 def decrease():
-    global interest rate
-    interest rate=interest rate-1
+    global interest
+    interest=interest-1
     print("Interest Rate Decrease")
-    print(interest rate)
+    print(interest)
     global dollar
     dollar=dollar+2
     print("Dollar Increase")
