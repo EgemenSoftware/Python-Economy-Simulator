@@ -5,64 +5,64 @@ etiket=tk.Label(text="Economy",fg="black")
 etiket.pack()
 etiket2=tk.Label(form,text="Simulator",fg="black")
 etiket2.pack()
-print("Ekonomi Simülatörüne Hoş Geldiniz")
-print("Borç Seviyesi 300, Enflasyon 250, Dolar 50, İşsizlik 100'ü bulursa oyun biter")
-faiz=8
-dolar=23
-enflasyon=175
-borç=200
-işsizlik=40
-def artar():
-    global faiz
-    faiz=faiz+1
-    print("Faiz Artar")
-    print(faiz)
-    global dolar
-    dolar=dolar-2
-    print("Dolar Azalır")
-    print(dolar)
-    global enflasyon
-    enflasyon=enflasyon-10
-    print("Enflasyon Azalır")
-    print(enflasyon)
-    global işsizlik
-    işsizlik=işsizlik+10
-    print("İşsizlik Artar")
-    print(işsizlik)
-    global borç
-    borç=borç+10
-    print("Borç Artar")
-    print(borç)
+print("Welcome to Economy Simulator")
+print("If Debt Level 300, Inflation 250, Dollar (Pound-Dollar) 50, Unemployment finds 100 game will be over")
+interest rate=8
+dollar=23
+inflation=175
+debt=200
+unemployment=40
+def increase():
+    global interest rate
+    interest rate=interest rate+1
+    print("Interest Rate Increase")
+    print(interest rate)
+    global dollar
+    dollar=dollar-2
+    print("Dolar Decrease")
+    print(dollar)
+    global inflation
+    inflation=inflation-10
+    print("Inflation Decrease")
+    print(inflation)
+    global unemployment
+    unemployment=unemployment+10
+    print("Unemployment Increase")
+    print(unemployment)
+    global debt
+    debt=debt+10
+    print("Debt Increase")
+    print(debt)
 
 
 form.state("normal")
 
-def azalır():
-    global faiz
-    faiz=faiz-1
-    print("Faiz Artar")
-    print(faiz)
-    global dolar
-    dolar=dolar+2
-    print("Dolar Azalır")
-    print(dolar)
-    global enflasyon
-    enflasyon=enflasyon+10
-    print("Enflasyon Azalır")
-    print(enflasyon)
-    global işsizlik
-    işsizlik=işsizlik-10
-    print("İşsizlik Artar")
-    print(işsizlik)
-    global borç
-    borç=borç-10
-    print("Borç Artar")
-    print(borç)
+def decrease():
+    global interest rate
+    interest rate=interest rate-1
+    print("Interest Rate Decrease")
+    print(interest rate)
+    global dollar
+    dollar=dollar+2
+    print("Dollar Increase")
+    print(dollar)
+    global inflation
+    inflation=inflation+10
+    print("Inflation Increase")
+    print(inflation)
+    global unemployment
+    unemployment=unemployment-10
+    print("Unemployment Decrease")
+    print(unemployment)
+    global debt
+    debt=debt-10
+    print("Debt Decrease")
+    print(debt)
 
 
-buton=tk.Button(form,text="Faizi Arttır",fg="black",bg="green",command=artar)
+buton=tk.Button(form,text="Increase Interest Rate",fg="black",bg="green",command=increase)
 buton.pack()
-buton2=tk.Button(form,text="Faizi Düşür",fg="black",bg="green",command=azalır)
+buton2=tk.Button(form,text="Decrease Interest Rate",fg="black",bg="green",command=decrease)
 buton2.pack()
 
 form.mainloop()
